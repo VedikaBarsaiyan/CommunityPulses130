@@ -4,98 +4,97 @@
     <meta charset="UTF-8">
     <title>Registration - Community Pulses</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            background-color: #96b8debc;
-            font-family: Arial, sans-serif;
+            background: #f0f2f5;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
 
         .container {
-            background-color: #c8f2f4;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #111010cb;
-            width: 90%;
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             max-width: 400px;
+            width: 100%;
         }
 
         h1 {
-            text-align: center;
-            color: #333;
+            font-size: 24px;
             margin-bottom: 10px;
+            color: #333;
         }
 
         p {
-            text-align: center;
             color: #666;
             margin-bottom: 20px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        form label {
+            font-weight: 500;
             color: #333;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .name-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        .name-group input {
-            flex: 1;
-        }
-
         .checkbox {
-            margin-bottom: 15px;
+            margin: 15px 0;
             font-size: 14px;
         }
 
-        .checkbox a {
-            color: #6C63FF;
-            text-decoration: none;
+        .checkbox input {
+            margin-right: 8px;
         }
 
-        .checkbox a:hover {
-            text-decoration: underline;
-        }
-
-        button {
+        button[type="submit"] {
             width: 100%;
-            padding: 10px;
-            background-color: #6C63FF;
+            padding: 12px;
+            background: #4CAF50;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
             cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
         }
 
-        button:hover {
-            background-color: #574fd3;
+        button[type="submit"]:hover {
+            background: #45a049;
         }
 
         .login-link {
             text-align: center;
-            margin-top: 15px;
+            margin: 15px 0;
             font-size: 14px;
         }
 
         .login-link a {
-            color: #6C63FF;
+            color: #007BFF;
             text-decoration: none;
         }
 
@@ -103,19 +102,38 @@
             text-decoration: underline;
         }
 
-        hr {
-            margin: 20px 0;
-            border: 0;
-            border-top: 1px solid #ccc;
-        }
-
         .social-buttons {
             display: flex;
             gap: 10px;
+            justify-content: space-between;
+            margin-top: 10px;
         }
 
         .social-buttons button {
             flex: 1;
+            padding: 10px;
+            border: none;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .social-buttons button:hover {
+            opacity: 0.9;
+        }
+
+        .google-btn {
+            background-color: #d51d10;
+        }
+
+        .twitter-btn {
+            background-color: #1da1f2;
+        }
+
+        .facebook-btn {
+            background-color: #1877f2;
         }
     </style>
 </head>
@@ -126,10 +144,8 @@
         <hr>
 
         <form action="#" method="POST">
-            <div class="name-group">
-                <input type="text" name="firstName" placeholder="First name" required>
-                <input type="text" name="lastName" placeholder="Last name" required>
-            </div>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="yourid@example.com" required>
@@ -154,13 +170,17 @@
 
             <hr>
 
-            <p style="text-align:center; color: #666;">Or sign up with</p>
+            <p style="text-align:center;">Or sign up with</p>
             <div class="social-buttons">
-                <button style="background-color: #d51d10;">Google</button>
-                <button style="background-color: #1da1f2;">Twitter</button>
-                <button style="background-color: #1877f2;">Facebook</button>
+                <button type="button" class="google-btn">Google</button>
+                <button type="button" class="twitter-btn">Twitter</button>
+                <button type="button" class="facebook-btn">Facebook</button>
             </div>
         </form>
     </div>
 </body>
 </html>
+
+          
+
+     
