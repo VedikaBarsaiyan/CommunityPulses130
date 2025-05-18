@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration - Community Pulses</title>
+    <style>
+        body {
+            background-color: #96b8debc;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #c8f2f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #111010cb;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .name-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .name-group input {
+            flex: 1;
+        }
+
+        .checkbox {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .checkbox a {
+            color: #6C63FF;
+            text-decoration: none;
+        }
+
+        .checkbox a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6C63FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #574fd3;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #6C63FF;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-buttons button {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create an account</h1>
+        <p>Join our community today</p>
+        <hr>
+
+        <form action="#" method="POST">
+            <div class="name-group">
+                <input type="text" name="firstName" placeholder="First name" required>
+                <input type="text" name="lastName" placeholder="Last name" required>
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="yourid@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" required> I agree to the <a href="#">Terms</a> and <a href="#">Privacy</a>
+                </label>
+            </div>
+
+            <button type="submit">Sign Up</button>
+
+            <div class="login-link">
+                Already have an account? <a href="#">Log in</a>
+            </div>
+
+            <hr>
+
+            <p style="text-align:center; color: #666;">Or sign up with</p>
+            <div class="social-buttons">
+                <button style="background-color: #d51d10;">Google</button>
+                <button style="background-color: #1da1f2;">Twitter</button>
+                <button style="background-color: #1877f2;">Facebook</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
